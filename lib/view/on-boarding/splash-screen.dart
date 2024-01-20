@@ -1,5 +1,5 @@
 import 'package:fhunger/view/login/welcome-view.dart';
-
+import 'package:fhunger/widget/colors.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +17,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void goWelcomeView() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 5));
+    welcomePage();
+  }
+
+  void welcomePage() {
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: ((context) => WelcomeView())));
   }
@@ -25,15 +29,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffc22524),
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Center(
-          child: Image.asset(
-            'assets/images/logo.png',
-            width: 250,
-          ),
-        ),
-        Text('Fhunger', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 40),)
+      backgroundColor: primaryColor,
+      body: Column(children: [
+        Image.asset(
+          'assets/images/logo.png',
+        )
       ]),
     );
   }
