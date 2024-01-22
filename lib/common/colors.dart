@@ -1,6 +1,8 @@
 // import 'package:flutter/material.dart';
-
-// class AppColors {}
+//
+// class AppColors {
+//   static Color get primaryColor => const Color(0xffc22524);
+// }
 // primary color code - c22524
 import 'dart:ui';
 

@@ -1,6 +1,7 @@
 import 'package:fhunger/view/login/welcome-view.dart';
-import 'package:fhunger/widget/colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
