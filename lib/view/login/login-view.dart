@@ -1,8 +1,8 @@
 import 'package:fhunger/common-widgets/rectangle-button.dart';
 import 'package:fhunger/common-widgets/rectangle-textfield.dart';
 import 'package:fhunger/common/social-media-icon.dart';
+import 'package:fhunger/view/login/signupview.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -66,6 +66,7 @@ class _LoginViewState extends State<LoginView> {
             height: 10,
           ),
           RectangleTextfield(
+
               controller: textPassword,
               hintText: 'Password',
               keyboardType: TextInputType.text,
@@ -86,16 +87,25 @@ class _LoginViewState extends State<LoginView> {
             height: 10,
           ),
           RectangleButton(
-              onPressed: () {}, title: "Login", buttonColor: Colors.yellow),
+            onPressed: () {},
+            title: "Login",
+            buttonColor: Colors.yellow,
+            fontColor: Colors.black,
+          ),
           const SizedBox(
             height: 10,
           ),
           Container(
             decoration: BoxDecoration(border: Border.all(width: 1)),
             child: RectangleButton(
-                onPressed: () {},
-                title: "Create Account",
-                buttonColor: Colors.white),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SignUpView()));
+              },
+              title: "Create Account",
+              buttonColor: Colors.white,
+              fontColor: Colors.black,
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
@@ -122,16 +132,19 @@ class _LoginViewState extends State<LoginView> {
               ],
             ),
           ),
-          const  Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // google button
               SquareTile(imgPath: 'assets/images/google.png'),
-              SizedBox(width: 5,),
+              SizedBox(
+                width: 5,
+              ),
               SquareTile(imgPath: 'assets/images/facebook.png'),
-              SizedBox(width: 5,),
+              SizedBox(
+                width: 5,
+              ),
               SquareTile(imgPath: 'assets/images/apple.png'),
-
             ],
           ),
         ],

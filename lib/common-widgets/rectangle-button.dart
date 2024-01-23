@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 class RectangleButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String title;
+  final Color fontColor;
   final Color buttonColor;
 
   const RectangleButton(
       {super.key,
       required this.onPressed,
       required this.title,
+      required this.fontColor,
       required this.buttonColor});
 
   @override
@@ -23,7 +25,7 @@ class RectangleButton extends StatelessWidget {
                child: Center(
                  child: Text(
                            title,
-                           style: TextStyle( fontSize: 20, fontWeight: FontWeight.w600),
+                           style: TextStyle( fontSize: 20,color: fontColor, fontWeight: FontWeight.w600),
                          ),
                ),
       ),

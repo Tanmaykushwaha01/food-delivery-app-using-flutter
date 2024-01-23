@@ -22,7 +22,7 @@ class RectangleTextfield extends StatelessWidget {
         keyboardType: keyboardType,
         obscureText: obscureText,
         decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
             fillColor: Colors.black12,
