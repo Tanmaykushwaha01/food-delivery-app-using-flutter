@@ -1,5 +1,6 @@
 import 'package:fhunger/common-widgets/rectangle-textfield.dart';
 import 'package:fhunger/common/social-media-icon.dart';
+import 'package:fhunger/view/login/forget-password-view.dart';
 import 'package:flutter/material.dart';
 
 import '../../common-widgets/rectangle-button.dart';
@@ -56,7 +57,7 @@ class _SignUpViewState extends State<SignUpView> {
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
             ),
             const Text(
-              'Sign Up to enjoy the benefits of fhunger loyalty program',
+              'Sign up to enjoy the benefits of Fhunger loyalty program',
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
             ),
             const SizedBox(
@@ -169,7 +170,9 @@ class _SignUpViewState extends State<SignUpView> {
                     height: 20,
                   ),
                   RectangleButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPassword(),));
+                    },
                     title: "SEND VERIFICATION CODE",
                     buttonColor: Colors.yellow,
                     fontColor: Colors.black,

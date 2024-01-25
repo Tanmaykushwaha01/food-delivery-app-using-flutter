@@ -1,6 +1,7 @@
 import 'package:fhunger/common-widgets/rectangle-button.dart';
 import 'package:fhunger/common-widgets/rectangle-textfield.dart';
 import 'package:fhunger/common/social-media-icon.dart';
+import 'package:fhunger/view/login/forget-password-view.dart';
 import 'package:fhunger/view/login/signupview.dart';
 import 'package:flutter/material.dart';
 
@@ -71,14 +72,22 @@ class _LoginViewState extends State<LoginView> {
                 hintText: 'Password',
                 keyboardType: TextInputType.text,
                 obscureText: false),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 38),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 38),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    'Forgot Password?',
-                    style: TextStyle(color: Colors.blue),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ResetPassword()));
+                    },
+                    child: const Text(
+                      'Forgot Password?',
+                      style: TextStyle(color: Colors.blue),
+                    ),
                   ),
                 ],
               ),

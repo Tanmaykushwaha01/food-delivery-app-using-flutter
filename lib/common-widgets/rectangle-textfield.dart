@@ -18,6 +18,7 @@ class RectangleTextfield extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * .8,
       child: TextField(
+
         controller: controller,
         keyboardType: keyboardType,
         obscureText: obscureText,

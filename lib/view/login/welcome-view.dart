@@ -69,9 +69,15 @@ class _WelcomeViewState extends State<WelcomeView> {
         const SizedBox(
           height: 70,
         ),
-       RectangleButton(title: 'Get Started',fontColor: Colors.white,buttonColor: Colors.black ,onPressed: (){
-         Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginView()));
-       },)
+        RectangleButton(
+          title: 'Get Started',
+          fontColor: Colors.white,
+          buttonColor: Colors.black,
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const LoginView()));
+          },
+        )
       ],
     ));
   }
