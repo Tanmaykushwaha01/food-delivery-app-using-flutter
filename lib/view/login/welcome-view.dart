@@ -1,4 +1,5 @@
 import 'package:fhunger/common-widgets/rectangle-button.dart';
+import 'package:fhunger/common/colors.dart';
 import 'package:fhunger/view/login/login-view.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class _WelcomeViewState extends State<WelcomeView> {
           height: 80,
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
-              color: Colors.black,
+              color: primaryColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
@@ -72,7 +73,7 @@ class _WelcomeViewState extends State<WelcomeView> {
         RectangleButton(
           title: 'Get Started',
           fontColor: Colors.white,
-          buttonColor: Colors.black,
+          buttonColor: primaryColor,
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const LoginView()));
