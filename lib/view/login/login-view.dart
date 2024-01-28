@@ -82,7 +82,7 @@ class _LoginViewState extends State<LoginView> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ResetPassword()));
+                              builder: (context) => const ForgetPassword()));
                     },
                     child: const Text(
                       'Forgot Password?',

@@ -1,16 +1,16 @@
-import 'package:fhunger/view/login/login-view.dart';
+import 'package:fhunger/view/login/otp-view.dart';
 import 'package:flutter/material.dart';
 
 import '../../common-widgets/rectangle-button.dart';
 
-class ResetPassword extends StatefulWidget {
-  const ResetPassword({super.key});
+class ForgetPassword extends StatefulWidget {
+  const ForgetPassword({super.key});
 
   @override
-  State<ResetPassword> createState() => _ResetPasswordState();
+  State<ForgetPassword> createState() => _ForgetPasswordState();
 }
 
-class _ResetPasswordState extends State<ResetPassword> {
+class _ForgetPasswordState extends State<ForgetPassword> {
   int _groupValue = 0;
   bool _verificationBtn = false;
   final _textEmail = TextEditingController();
@@ -145,7 +145,7 @@ class _ResetPasswordState extends State<ResetPassword> {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const LoginView(),
+          builder: (context) => const OTPview(),
         ));
   }
 }

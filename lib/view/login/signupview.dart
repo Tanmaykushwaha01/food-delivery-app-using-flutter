@@ -171,7 +171,7 @@ class _SignUpViewState extends State<SignUpView> {
                   ),
                   RectangleButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPassword(),));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgetPassword(),));
                     },
                     title: "SEND VERIFICATION CODE",
                     buttonColor: Colors.yellow,
