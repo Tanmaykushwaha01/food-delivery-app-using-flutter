@@ -2,6 +2,7 @@ import 'package:fhunger/common-widgets/rectangle-button.dart';
 import 'package:fhunger/common/colors.dart';
 import 'package:fhunger/view/login/login-view.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});
@@ -60,7 +61,6 @@ class _WelcomeViewState extends State<WelcomeView> {
               )),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
                 'assets/images/logo.png',
@@ -78,7 +78,7 @@ class _WelcomeViewState extends State<WelcomeView> {
           ),
         ),
         const SizedBox(
-          height: 70,
+          height: 50,
         ),
         Expanded(
           child: PageView.builder(
@@ -88,12 +88,13 @@ class _WelcomeViewState extends State<WelcomeView> {
               itemBuilder: (context, index) {
                 var pObj = pageArr[index] as Map? ?? {};
                 return Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       width: media.width,
-                      constraints: const BoxConstraints(maxHeight: 250, minHeight: 250,),
+                      constraints: const BoxConstraints(
+                        maxHeight: 250,
+                        minHeight: 250,
+                      ),
                       alignment: Alignment.center,
                       child: Image.asset(
                         pObj['image'].toString(),
@@ -104,7 +105,6 @@ class _WelcomeViewState extends State<WelcomeView> {
                     const SizedBox(
                       height: 30,
                     ),
-
                     Text(
                       pObj['title'].toString(),
                       style: const TextStyle(
@@ -113,7 +113,9 @@ class _WelcomeViewState extends State<WelcomeView> {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 8,),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     Text(
                       pObj['subtitle'].toString(),
                       style: const TextStyle(
@@ -121,27 +123,54 @@ class _WelcomeViewState extends State<WelcomeView> {
                         fontSize: 14,
                       ),
                       textAlign: TextAlign.center,
-                    )
+                    ),
                   ],
                 );
               }),
         ),
-        // Image.asset(
-        //   'assets/images/handbags.jpg',
-        //   height: 220,
-        // ),
-
         const SizedBox(
-          height: 70,
+          height: 60,
+        ),
+        SmoothPageIndicator(controller: controller, count: 3, effect: const SwapEffect(
+          activeDotColor: Colors.red, dotHeight: 8, dotWidth: 20
+        )),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //     children: pageArr.map((e) {
+        //       var index = pageArr.indexOf(e);
+        //       return Container(
+        //         height: 8,
+        //         width: 8,
+        //         margin: const EdgeInsets.symmetric(horizontal: 4),
+        //         decoration: BoxDecoration(
+        //           color: index == selectPage ? Colors.red : Colors.grey,
+        //           borderRadius: BorderRadius.circular(4),
+        //         ),
+        //       );
+        //     }).toList()),
+        const SizedBox(
+          height: 10,
         ),
         RectangleButton(
           title: 'Get Started',
-          fontColor: Colors.white,
-          buttonColor: primaryColor,
+          fontColor: Colors.black,
+          buttonColor: Colors.yellow,
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const LoginView()));
+            if (selectPage >= 2) {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LoginView()));
+            } else {
+              setState(() {
+                selectPage = selectPage + 1;
+                controller.animateToPage(selectPage,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.fastOutSlowIn);
+              });
+            }
           },
+        ),
+        const SizedBox(
+          height: 40,
         )
       ],
     ));
