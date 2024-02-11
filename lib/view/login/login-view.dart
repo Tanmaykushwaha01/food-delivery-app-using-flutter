@@ -5,6 +5,8 @@ import 'package:fhunger/view/login/forget-password-view.dart';
 import 'package:fhunger/view/login/signupview.dart';
 import 'package:flutter/material.dart';
 
+import '../main-tabview/main-tabview.dart';
+
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -96,7 +98,12 @@ class _LoginViewState extends State<LoginView> {
               height: 10,
             ),
             RectangleButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MainTabView()));
+              },
               title: "Login",
               buttonColor: Colors.yellow,
               fontColor: Colors.black,
@@ -107,7 +114,12 @@ class _LoginViewState extends State<LoginView> {
             Container(
               decoration: BoxDecoration(border: Border.all(width: 1)),
               child: RectangleButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainTabView()));
+                },
                 title: "Continue as Guest",
                 buttonColor: Colors.white,
                 fontColor: Colors.black,

@@ -54,7 +54,7 @@ class _WelcomeViewState extends State<WelcomeView> {
           height: 80,
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
-              color: primaryColor,
+              color: Color(0xffc22524),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
@@ -91,7 +91,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                   children: [
                     Container(
                       width: media.width,
-                      constraints: const BoxConstraints(
+                      constraints: const BoxConstraints( 
                         maxHeight: 250,
                         minHeight: 250,
                       ),
