@@ -1,4 +1,5 @@
 import 'package:fhunger/view/home/home-view.dart';
+import 'package:fhunger/view/menu/menu-view.dart';
 import 'package:fhunger/view/on-boarding/splash-screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeView(),
-      // home: const SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

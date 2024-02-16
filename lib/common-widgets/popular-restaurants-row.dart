@@ -5,7 +5,8 @@ import '../common/colors.dart';
 class PopularRestaurantRow extends StatelessWidget {
   final Map pObj;
   final VoidCallback onTap;
-  const PopularRestaurantRow({super.key, required this.pObj, required this.onTap});
+  const PopularRestaurantRow(
+      {super.key, required this.pObj, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class PopularRestaurantRow extends StatelessWidget {
             Image.asset(
               pObj['image'].toString(),
               width: double.maxFinite,
-              height: 70,
+              height: 250,
               fit: BoxFit.cover,
             ),
             const SizedBox(
@@ -34,7 +35,7 @@ class PopularRestaurantRow extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       color: TColor.primaryText,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w700),
                 ),
                 const SizedBox(
                   height: 12,
@@ -61,14 +62,13 @@ class PopularRestaurantRow extends StatelessWidget {
                     width: 8,
                   ),
                   Text(
-                    '(${ pObj['rating'] } Ratings)',
+                    '(${pObj['rating']} Ratings)',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 11,
                       color: TColor.secondaryText,
                     ),
                   ),
-
                   Text(
                     pObj['type'],
                     textAlign: TextAlign.center,
@@ -86,7 +86,7 @@ class PopularRestaurantRow extends StatelessWidget {
                     ),
                   ),
                   Text(
-                     pObj['food_type'],
+                    pObj['food_type'],
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 11,

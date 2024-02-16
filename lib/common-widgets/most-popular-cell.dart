@@ -10,11 +10,11 @@ class MostPopularCell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:
-      const EdgeInsets.symmetric(horizontal: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 8),
       child: InkWell(
         onTap: onTap,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
@@ -25,7 +25,9 @@ class MostPopularCell extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            const SizedBox(height: 8,),
+            const SizedBox(
+              height: 8,
+            ),
             Text(
               mObj['name'],
               textAlign: TextAlign.center,
@@ -34,47 +36,54 @@ class MostPopularCell extends StatelessWidget {
                   color: TColor.primaryText,
                   fontWeight: FontWeight.w500),
             ),
-            const SizedBox(height: 4,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  mObj['type'],
+            const SizedBox(
+              height: 4,
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+              Text(
+                mObj['type'],
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 12,
-                    color: TColor.secondaryText,),
-              ),
-                Text(
-                  " . ",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 12,
-                    color: TColor.primaryColor,),
-              ),
-                Text(
-                  mObj['food_type'],
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 12,
-                    color: TColor.secondaryText,),
-              ),
-                const SizedBox(
-                  width: 8,
+                  fontSize: 12,
+                  color: TColor.secondaryText,
                 ),
-                Icon(Icons.star,size: 10, color: TColor.primaryColor,),
-                const SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  mObj['rate'],
+              ),
+              Text(
+                " . ",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 12,
-                    color: TColor.primaryText,
+                  fontSize: 12,
+                  color: TColor.primaryColor,
                 ),
-              ),]
-            )
+              ),
+              Text(
+                mObj['food_type'],
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: TColor.secondaryText,
+                ),
+              ),
+              const SizedBox(
+                width: 8,
+              ),
+              Icon(
+                Icons.star,
+                size: 10,
+                color: TColor.primaryColor,
+              ),
+              const SizedBox(
+                width: 8,
+              ),
+              Text(
+                mObj['rate'],
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: TColor.primaryText,
+                ),
+              ),
+            ])
           ],
         ),
       ),

@@ -107,7 +107,8 @@ class _HomeViewState extends State<HomeView> {
       "rating": "124",
       "type": "Cafa",
       "food_type": "Western Food"
-    },{
+    },
+    {
       "image": "assets/images/omlete.png",
       "name": "Mulberry Pizza by Josh",
       "rate": "4.9",
@@ -147,7 +148,10 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       IconButton(
                           onPressed: () {},
-                          icon: const Icon(Icons.shopping_cart, size: 25,))
+                          icon: const Icon(
+                            Icons.shopping_cart,
+                            size: 25,
+                          ))
                     ],
                   ),
                 ),
@@ -164,14 +168,18 @@ class _HomeViewState extends State<HomeView> {
                         style: TextStyle(
                             fontSize: 11, color: TColor.secondaryText),
                       ),
+                      const SizedBox(
+                        height: 6,
+                      ),
                       Row(
                         children: [
                           Text(
                             "Current Location",
                             style: TextStyle(
-                                fontSize: 16, color: TColor.secondaryText, fontWeight: FontWeight.w700),
+                                fontSize: 16,
+                                color: TColor.secondaryText,
+                                fontWeight: FontWeight.w700),
                           ),
-
                           IconButton(
                               padding: EdgeInsets.zero,
                               onPressed: () {},
