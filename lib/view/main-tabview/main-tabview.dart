@@ -2,6 +2,7 @@ import 'package:fhunger/common-widgets/tab-button.dart';
 import 'package:fhunger/common/colors.dart';
 import 'package:fhunger/view/home/home-view.dart';
 import 'package:fhunger/view/menu/menu-view.dart';
+import 'package:fhunger/view/offer/offer-view.dart';
 import 'package:flutter/material.dart';
 
 class MainTabView extends StatefulWidget {
@@ -73,7 +74,7 @@ class _MainTabViewState extends State<MainTabView> {
                   onTap: () {
                     if (selectTab != 1) {
                       selectTab = 1;
-                      selectPageView = Container();
+                      selectPageView = const OfferView();
                     }
                     if (mounted) {
                       setState(() {});
