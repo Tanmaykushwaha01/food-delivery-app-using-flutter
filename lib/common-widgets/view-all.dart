@@ -14,7 +14,7 @@ class ViewAllTileRow extends StatelessWidget {
       children: [
          Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 20, fontWeight: FontWeight.w800),
         ),
         TextButton(

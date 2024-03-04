@@ -2,7 +2,9 @@ import 'package:fhunger/common-widgets/tab-button.dart';
 import 'package:fhunger/common/colors.dart';
 import 'package:fhunger/view/home/home-view.dart';
 import 'package:fhunger/view/menu/menu-view.dart';
+import 'package:fhunger/view/more/more-view.dart';
 import 'package:fhunger/view/offer/offer-view.dart';
+import 'package:fhunger/view/profile/profile-view.dart';
 import 'package:flutter/material.dart';
 
 class MainTabView extends StatefulWidget {
@@ -86,9 +88,9 @@ class _MainTabViewState extends State<MainTabView> {
               const SizedBox(width: 30, height: 40,),
               TabButton(
                   onTap: () {
-                    if (selectTab != 2) {
-                      selectTab = 2;
-                      selectPageView = Container();
+                    if (selectTab != 3) {
+                      selectTab = 3;
+                      selectPageView = const ProfileView();
                     }
                     if (mounted) {
                       setState(() {});
@@ -99,15 +101,15 @@ class _MainTabViewState extends State<MainTabView> {
                   isSelected: selectTab == 0),
               TabButton(
                   onTap: () {
-                    if (selectTab != 3) {
-                      selectTab = 3;
-                      selectPageView = Container();
+                    if (selectTab != 4) {
+                      selectTab = 4;
+                      selectPageView = const MoreView();
                     }
                     if (mounted) {
                       setState(() {});
                     }
                   },
-                  title: 'Menu',
+                  title: 'More',
                   icons: const Icon(Icons.menu),
                   isSelected: selectTab == 0),
 

@@ -75,7 +75,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   child: RadioListTile(
                       value: 0,
                       groupValue: _groupValue,
-                      title: Text('Email'),
+                      title: const Text('Email'),
                       onChanged: (newValue) =>
                           setState(() => _groupValue = newValue!)),
                 ),
@@ -83,7 +83,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   child: RadioListTile(
                       value: 2,
                       groupValue: _groupValue,
-                      title: Text('Phone'),
+                      title: const Text('Phone'),
                       onChanged: (newValue) =>
                           setState(() => _groupValue = newValue!)),
                 ),
@@ -92,7 +92,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             const SizedBox(
               height: 5,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * .8,
               child: TextField(
                 onChanged: (value) {

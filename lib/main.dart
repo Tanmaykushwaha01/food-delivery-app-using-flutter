@@ -1,5 +1,4 @@
-import 'package:fhunger/view/home/home-view.dart';
-import 'package:fhunger/view/menu/menu-view.dart';
+
 import 'package:fhunger/view/on-boarding/splash-screen.dart';
 import 'package:flutter/material.dart';
 

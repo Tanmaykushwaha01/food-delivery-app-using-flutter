@@ -15,7 +15,7 @@ class RectangleTextfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * .8,
       child: TextField(
 

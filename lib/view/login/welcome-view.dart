@@ -1,7 +1,7 @@
 import 'package:fhunger/common-widgets/rectangle-button.dart';
-import 'package:fhunger/common/colors.dart';
 import 'package:fhunger/view/login/login-view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WelcomeView extends StatefulWidget {
@@ -89,17 +89,19 @@ class _WelcomeViewState extends State<WelcomeView> {
                 var pObj = pageArr[index] as Map? ?? {};
                 return Column(
                   children: [
-                    Container(
-                      width: media.width,
-                      constraints: const BoxConstraints( 
-                        maxHeight: 250,
-                        minHeight: 250,
-                      ),
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        pObj['image'].toString(),
-                        width: media.width * 0.6,
-                        fit: BoxFit.contain,
+                    Expanded(
+                      child: Container(
+                        width: media.width,
+                        constraints: const BoxConstraints(
+                          maxHeight: 250,
+                          minHeight: 250,
+                        ),
+                        alignment: Alignment.center,
+                        child: Image.asset(
+                          pObj['image'].toString(),
+                          width: media.width * 0.6,
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -131,9 +133,11 @@ class _WelcomeViewState extends State<WelcomeView> {
         const SizedBox(
           height: 60,
         ),
-        SmoothPageIndicator(controller: controller, count: 3, effect: const SwapEffect(
-          activeDotColor: Colors.red, dotHeight: 8, dotWidth: 20
-        )),
+        SmoothPageIndicator(
+            controller: controller,
+            count: 3,
+            effect: const SwapEffect(
+                activeDotColor: Colors.red, dotHeight: 8, dotWidth: 20)),
         // Row(
         //   mainAxisAlignment: MainAxisAlignment.center,
         //     children: pageArr.map((e) {
