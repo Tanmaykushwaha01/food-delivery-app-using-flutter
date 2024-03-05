@@ -1,6 +1,7 @@
 import 'package:fhunger/common-widgets/Rounded-button.dart';
 import 'package:fhunger/common-widgets/round-button.dart';
 import 'package:fhunger/common/colors.dart';
+import 'package:fhunger/view/more/add-card-view.dart';
 import 'package:flutter/material.dart';
 
 class PaymentDetail extends StatefulWidget {
@@ -156,7 +157,7 @@ class _PaymentDetailState extends State<PaymentDetail> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 15, horizontal: 35),
                     child: Row(
-                    //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Other Methods",
@@ -171,18 +172,25 @@ class _PaymentDetailState extends State<PaymentDetail> {
                 ],
               ),
             ),
-           const  SizedBox(height:15),
+            const SizedBox(height: 35),
             Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 child: RoundIconButton(
-                  onPressed: () {},
-                  color: Colors.deepOrangeAccent,
+                  color: TColor.primaryColor,
+                  fontSize: 16,
                   icon: const Icon(
                     Icons.add,
                     color: Colors.white,
                   ),
                   title: 'Add another Debit/Credit card',
+                  onPressed: () {
+                    showModalBottomSheet(
+                        isScrollControlled: true,
+                         // backgroundColor: Colors.transparent,
+                        context: context,
+                        builder: (context) => const AddCardView());
+                  },
                 )),
           ]),
         ),

@@ -17,19 +17,20 @@ class _WelcomeViewState extends State<WelcomeView> {
 
   List pageArr = [
     {
-      'title': 'Fun with Hunger',
-      'subtitle': 'Explore the Flavour and deals. \n Multiple ways to order',
+      "title": "Find Food You Love",
+      "subtitle":
+          "Discover the best foods from over 1,000\nrestaurants and fast delivery to your\ndoorstep",
       'image': 'assets/images/handbags.jpg'
     },
     {
-      'title': 'Simple Steps',
-      'subtitle':
-          ' 1. Add items to your cart. \n 2. Quote for large order, if applicable \n 3. Pay in the app.',
+      "title": "Fast Delivery",
+      "subtitle": "Fast food delivery to your home, office\n wherever you are",
       'image': 'assets/images/mobile.png'
     },
     {
-      'title': 'Pick up & Have Fun with Hunger',
-      'subtitle': 'Create your Fhunger profile for \n rewards and deals.',
+      "title": "Live Tracking",
+      "subtitle":
+          "Real time tracking of your food on the app\nonce you placed the order",
       'image': 'assets/images/handbags.jpg',
     },
   ];
@@ -88,20 +89,19 @@ class _WelcomeViewState extends State<WelcomeView> {
               itemBuilder: (context, index) {
                 var pObj = pageArr[index] as Map? ?? {};
                 return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: Container(
-                        width: media.width,
-                        constraints: const BoxConstraints(
-                          maxHeight: 250,
-                          minHeight: 250,
-                        ),
-                        alignment: Alignment.center,
-                        child: Image.asset(
-                          pObj['image'].toString(),
-                          width: media.width * 0.6,
-                          fit: BoxFit.contain,
-                        ),
+                    Container(
+                      width: media.width,
+                      constraints: const BoxConstraints(
+                        maxHeight: 250,
+                        minHeight: 250,
+                      ),
+                      alignment: Alignment.center,
+                      child: Image.asset(
+                        pObj['image'].toString(),
+                        width: media.width *  0.65,
+                        fit: BoxFit.contain,
                       ),
                     ),
                     const SizedBox(

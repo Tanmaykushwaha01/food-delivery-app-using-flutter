@@ -2,6 +2,8 @@ import 'package:fhunger/common/colors.dart';
 import 'package:fhunger/view/more/payment-detail.dart';
 import 'package:flutter/material.dart';
 
+import 'notification-view.dart';
+
 class MoreView extends StatefulWidget {
   const MoreView({super.key});
 
@@ -95,6 +97,29 @@ class _MoreViewState extends State<MoreView> {
                       switch ( mObj['index'].toString()){
                         case '1': Navigator.push(context, MaterialPageRoute(builder: (context)=> const PaymentDetail()));
                         break;
+                        // case "2":
+                        //   Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(
+                        //           builder: (context) => const MyOrderView()));
+                        case "3":
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const NotificationView()));
+                        // case "4":
+                        //   Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(
+                        //           builder: (context) => const InboxView()));
+                        // case "5":
+                        //   Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(
+                        //           builder: (context) => const AboutUsView()));
+                        // case "6":
+                        //   ServiceCall.logout();
                         default:
                       }
 
