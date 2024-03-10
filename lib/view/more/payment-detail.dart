@@ -32,7 +32,7 @@ class _PaymentDetailState extends State<PaymentDetail> {
                 const Expanded(
                   child: Text(
                     'Payment Details',
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 30),
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
                   ),
                 ),
                 IconButton(

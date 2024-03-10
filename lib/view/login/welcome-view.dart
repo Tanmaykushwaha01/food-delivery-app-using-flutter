@@ -98,10 +98,12 @@ class _WelcomeViewState extends State<WelcomeView> {
                         minHeight: 250,
                       ),
                       alignment: Alignment.center,
-                      child: Image.asset(
-                        pObj['image'].toString(),
-                        width: media.width *  0.65,
-                        fit: BoxFit.contain,
+                      child: Expanded(
+                        child: Image.asset(
+                          pObj['image'].toString(),
+                          width: media.width *  0.65,
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
                     const SizedBox(

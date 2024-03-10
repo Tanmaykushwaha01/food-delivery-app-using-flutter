@@ -65,7 +65,7 @@ class _NotificationViewState extends State<NotificationView> {
                     child: Text(
                       'Notifications',
                       style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 30),
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
                     ),
                   ),
                   IconButton(
@@ -76,6 +76,7 @@ class _NotificationViewState extends State<NotificationView> {
                     ),
                   ),
                 ],
+
               ),
             ),
             const SizedBox(
